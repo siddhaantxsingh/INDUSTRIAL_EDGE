@@ -1,0 +1,26 @@
+{
+ "append": [
+  {
+   "Mode": "fsync every record",
+   "Records": 2000,
+   "RecordsPerSec": 5347.082579076093,
+   "MBPerSec": 0.7272032307543486
+  },
+  {
+   "Mode": "group commit (fsync every 100 ms)",
+   "Records": 300000,
+   "RecordsPerSec": 732798.5327301997,
+   "MBPerSec": 99.66060045130718
+  },
+  {
+   "Mode": "no fsync (OS page cache)",
+   "Records": 300000,
+   "RecordsPerSec": 846444.609861039,
+   "MBPerSec": 115.11646694110131
+  }
+ ],
+ "recovery": {
+  "open_seconds": 0.06302303,
+  "records": 1000000
+ }
+}

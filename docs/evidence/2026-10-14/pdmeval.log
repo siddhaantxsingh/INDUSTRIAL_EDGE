@@ -1,0 +1,17 @@
+ 20:56:24 up 19 min,  0 user,  load average: 44.18, 33.69, 19.38
+windows/day 144; healthy fleet 20 machines x 30 days; run-to-failure 20 machines x 4 faults
+
+| detector | precision | recall | F1 | false alarms / machine-day (healthy fleet) | detected before failure | median lead time (days) | p10 lead time | median severity at detection |
+|---|---|---|---|---|---|---|---|---|
+| model | 0.919 | 0.926 | 0.923 | 0.1092 | 80/80 | 11.2 | 6.1 | 0.06 |
+| ewma_z3 | 0.434 | 0.004 | 0.008 | 0.0000 | 0/80 | NaN | NaN | NaN |
+| ewma_z6 | 0.000 | 0.000 | 0.000 | 0.0000 | 0/80 | NaN | NaN | NaN |
+
+Model confusion matrix over scored windows (rows true, columns predicted): [healthy imbalance misalignment bearing_outer bearing_inner overload]
+healthy [143959 2760 258 1237 3514 1343]
+imbalance [1862 24855 15 18 132 113]
+misalignment [186 16 27537 4 44 16]
+bearing_outer [1365 37 1 26092 258 25]
+bearing_inner [4861 208 24 157 24101 102]
+overload [0 0 0 0 0 0]
+ 20:59:49 up 22 min,  0 user,  load average: 30.42, 32.77, 21.95

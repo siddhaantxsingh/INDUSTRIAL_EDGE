@@ -1,0 +1,8 @@
+QEMU netduinoplus2 (STM32F405 model). DWT is not modelled by QEMU, so cycles read 0 here; this run only checks that the board build boots and is bit-exact.
+windows=18
+logit_mismatches=0
+cycles_features_mean=0
+cycles_features_max=0
+cycles_quant_mlp_mean=0
+cycles_quant_mlp_max=0
+RESULT: BIT-EXACT

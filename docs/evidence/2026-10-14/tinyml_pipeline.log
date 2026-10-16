@@ -1,0 +1,157 @@
+ 20:38:24 up 1 min,  0 user,  load average: 2.52, 0.61, 0.20
+2026/10/14 20:38:34 wrote 9000 train and 3000 test windows to tinyml/data
+features: 8.5s
+float test accuracy 0.9670  (train 0.9679, epochs 81)
+int8 test accuracy 0.9673; float-int8 agreement 0.9977
+{
+ "acc_float": 0.967,
+ "acc_int8": 0.9673333333333334,
+ "float_int8_agreement": 0.9976666666666667,
+ "macro_f1_int8": 0.967836794815245,
+ "params": 1366,
+ "test_expected_sha256": "4b2a25fe03f83afaa0223582106586884909871fe166252d8cd99ce0c8fd3257"
+}
+confusion int8 (rows true, cols predicted):
+   [485, 6, 1, 0, 5, 3]
+   [13, 486, 0, 0, 0, 1]
+   [2, 0, 498, 0, 0, 0]
+   [9, 0, 0, 491, 0, 0]
+   [38, 3, 0, 0, 458, 1]
+   [14, 0, 0, 0, 2, 484]
+total 12.2s
+3000 windows
+host C sha256 4b2a25fe03f83afaa0223582106586884909871fe166252d8cd99ce0c8fd3257
+python sha256 4b2a25fe03f83afaa0223582106586884909871fe166252d8cd99ce0c8fd3257
+HOST C: BIT-EXACT with Python reference on the whole test set
+/home/user/PROJECTS/industrial-edge/tinyml/c/m4/build/m4/edge_ml.o  :
+section                  size   addr
+.text                       0      0
+.data                       0      0
+.bss                        0      0
+.text.fft_core            264      0
+.text.order_energy        200      0
+.text.edge_features      1688      0
+.text.edge_quantize       124      0
+.text.edge_mlp            592      0
+.text.edge_argmax          36      0
+.text.edge_classify       120      0
+.rodata.band_edges         22      0
+.bss.im_buf              4096      0
+.bss.re_buf              4096      0
+.bss.d_buf               2048      0
+.rodata.edge_s2             6      0
+.rodata.edge_m2            24      0
+.rodata.edge_b2            24      0
+.rodata.edge_w2            96      0
+.rodata.edge_s1            16      0
+.rodata.edge_m1            64      0
+.rodata.edge_b1            64      0
+.rodata.edge_w1           512      0
+.rodata.edge_s0            32      0
+.rodata.edge_m0           128      0
+.rodata.edge_b0           128      0
+.rodata.edge_w0           704      0
+.rodata.edge_feat_mul      88      0
+.rodata.edge_feat_lo       88      0
+.rodata.edge_bitrev      2048      0
+.rodata.edge_sin         1024      0
+.rodata.edge_cos         1024      0
+.rodata.edge_hann        2048      0
+.comment                   39      0
+.ARM.attributes            46      0
+Total                   21489
+
+
+   text	   data	    bss	    dec	    hex	filename
+  12556	      0	  14356	  26912	   6920	/home/user/PROJECTS/industrial-edge/tinyml/c/m4/build/edge_m4.elf
+calib_2M_instr_ticks=50000
+windows=3000
+systick_ticks_features_total=35992586
+systick_ticks_quantize_total=45611
+systick_ticks_mlp_total=700639
+systick_ticks_features_min=11997
+systick_ticks_features_max=11998
+systick_ticks_mlp_min=233
+systick_ticks_mlp_max=234
+dwt_cyccnt_delta=0
+QEMU cortex-m4 (mps2-an386): BIT-EXACT on the whole test set
+   text	   data	    bss	    dec	    hex	filename
+  12556	      0	  14356	  26912	   6920	/home/user/PROJECTS/industrial-edge/tinyml/c/m4/build/edge_m4.elf
+edge_ml.o .data 0
+edge_ml.o .text 3024
+edge_ml.o .bss 0
+edge_ml.o .roda 8140
+edge_ml.o .bss. 10240
+../edge_ml.c:22:13:fft_core	80	static
+../edge_ml.c:45:17:order_energy	28	static
+../edge_ml.c:54:6:edge_features	56	static
+../edge_ml.c:118:6:edge_quantize	24	static
+../edge_ml.c:145:6:edge_mlp	96	static
+../edge_ml.c:152:5:edge_argmax	12	static
+../edge_ml.c:159:5:edge_classify	136	static
+/home/user/PROJECTS/industrial-edge/tinyml/c/m4/build/m3/edge_ml.o  :
+section                  size   addr
+.text                       0      0
+.data                       0      0
+.bss                        0      0
+.text.fft_core            272      0
+.text.order_energy        208      0
+.text.edge_features      1688      0
+.text.edge_quantize       128      0
+.text.edge_mlp            592      0
+.text.edge_argmax          36      0
+.text.edge_classify       120      0
+.rodata.band_edges         22      0
+.bss.im_buf              4096      0
+.bss.re_buf              4096      0
+.bss.d_buf               2048      0
+.rodata.edge_s2             6      0
+.rodata.edge_m2            24      0
+.rodata.edge_b2            24      0
+.rodata.edge_w2            96      0
+.rodata.edge_s1            16      0
+.rodata.edge_m1            64      0
+.rodata.edge_b1            64      0
+.rodata.edge_w1           512      0
+.rodata.edge_s0            32      0
+.rodata.edge_m0           128      0
+.rodata.edge_b0           128      0
+.rodata.edge_w0           704      0
+.rodata.edge_feat_mul      88      0
+.rodata.edge_feat_lo       88      0
+.rodata.edge_bitrev      2048      0
+.rodata.edge_sin         1024      0
+.rodata.edge_cos         1024      0
+.rodata.edge_hann        2048      0
+.comment                   39      0
+.ARM.attributes            45      0
+Total                   21508
+
+
+   text	   data	    bss	    dec	    hex	filename
+  12560	      0	  14356	  26916	   6924	/home/user/PROJECTS/industrial-edge/tinyml/c/m4/build/edge_m3.elf
+calib_2M_instr_ticks=50000
+windows=3000
+systick_ticks_features_total=35916458
+systick_ticks_quantize_total=45579
+systick_ticks_mlp_total=700595
+systick_ticks_features_min=11972
+systick_ticks_features_max=11973
+systick_ticks_mlp_min=233
+systick_ticks_mlp_max=234
+dwt_cyccnt_delta=0
+QEMU cortex-m3 (mps2-an385): BIT-EXACT on the whole test set
+   text	   data	    bss	    dec	    hex	filename
+  12560	      0	  14356	  26916	   6924	/home/user/PROJECTS/industrial-edge/tinyml/c/m4/build/edge_m3.elf
+edge_ml.o .data 0
+edge_ml.o .text 3044
+edge_ml.o .bss 0
+edge_ml.o .roda 8140
+edge_ml.o .bss. 10240
+../edge_ml.c:22:13:fft_core	80	static
+../edge_ml.c:45:17:order_energy	28	static
+../edge_ml.c:54:6:edge_features	64	static
+../edge_ml.c:118:6:edge_quantize	24	static
+../edge_ml.c:145:6:edge_mlp	96	static
+../edge_ml.c:152:5:edge_argmax	12	static
+../edge_ml.c:159:5:edge_classify	136	static

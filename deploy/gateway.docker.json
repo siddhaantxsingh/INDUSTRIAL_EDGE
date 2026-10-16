@@ -1,0 +1,26 @@
+{
+  "gateway_id": "gw1",
+  "data_dir": "/data/gw1",
+  "http": "0.0.0.0:9100",
+  "mqtt": {"addr": "mosquitto:8883", "topic_prefix": "plant1/gw1", "keepalive_s": 10, "batch_max": 500, "inflight": 8,
+    "require_tls": true,
+    "tls": {"ca_file": "/etc/edgegw/certs/ca.pem", "cert_file": "/etc/edgegw/certs/client.pem",
+            "key_file": "/etc/edgegw/certs/client.key", "server_name": "mosquitto"},
+    "username": "gw1", "password_file": "/etc/edgegw/certs/mqtt.password"},
+  "queue": {"segment_bytes": 4194304, "max_bytes": 268435456, "sync_ms": 100},
+  "devices": [
+    {"name": "tank1", "addr": "plcsim:5020", "unit": 1, "poll_ms": 100, "timeout_ms": 500,
+     "tags": [
+      {"name": "level", "table": "input", "addr": 0, "type": "float32", "unit": "%",
+       "compression": {"type": "swinging_door", "dev": 0.2, "max_gap_ms": 10000},
+       "alarm": {"high": 58, "deadband": 2, "on_delay_ms": 500, "off_delay_ms": 500}},
+      {"name": "temperature", "table": "input", "addr": 2, "type": "float32", "unit": "C",
+       "compression": {"type": "deadband", "dev": 0.1, "max_gap_ms": 10000},
+       "anomaly": {"alpha": 0.05, "z": 6, "warmup": 50}},
+      {"name": "counter", "table": "input", "addr": 6, "type": "uint32"}
+     ]},
+    {"name": "hoist1", "addr": "plcsim:5020", "unit": 1, "poll_ms": 1000, "timeout_ms": 500, "tags": [],
+     "vibration": {"seq_addr": 100, "rpm_addr": 101, "current_addr": 102, "wave_addr": 103, "period_ms": 500,
+                   "alarm_windows": 3, "drift": {"window": 300}}}
+  ]
+}

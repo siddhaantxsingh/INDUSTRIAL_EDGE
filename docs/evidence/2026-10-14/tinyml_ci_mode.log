@@ -1,0 +1,57 @@
+ 08:18:50 up 6 min,  0 user,  load average: 11.58, 5.19, 2.01
+2026/10/15 08:18:56 wrote 9000 train and 3000 test windows to tinyml/data
+python reference features computed for 3000 windows
+3000 windows
+host C sha256 4b2a25fe03f83afaa0223582106586884909871fe166252d8cd99ce0c8fd3257
+python sha256 4b2a25fe03f83afaa0223582106586884909871fe166252d8cd99ce0c8fd3257
+HOST C: BIT-EXACT with Python reference on the whole test set
+calib_2M_instr_ticks=50000
+windows=3000
+systick_ticks_features_total=35992586
+systick_ticks_quantize_total=45611
+systick_ticks_mlp_total=700639
+systick_ticks_features_min=11997
+systick_ticks_features_max=11998
+systick_ticks_mlp_min=233
+systick_ticks_mlp_max=234
+dwt_cyccnt_delta=0
+QEMU cortex-m4 (mps2-an386): BIT-EXACT on the whole test set
+   text	   data	    bss	    dec	    hex	filename
+  12556	      0	  14356	  26912	   6920	/home/user/PROJECTS/industrial-edge/tinyml/c/m4/build/edge_m4.elf
+edge_ml.o .data 0
+edge_ml.o .text 3024
+edge_ml.o .bss 0
+edge_ml.o .roda 8140
+edge_ml.o .bss. 10240
+../edge_ml.c:22:13:fft_core	80	static
+../edge_ml.c:45:17:order_energy	28	static
+../edge_ml.c:54:6:edge_features	56	static
+../edge_ml.c:118:6:edge_quantize	24	static
+../edge_ml.c:145:6:edge_mlp	96	static
+../edge_ml.c:152:5:edge_argmax	12	static
+../edge_ml.c:159:5:edge_classify	136	static
+calib_2M_instr_ticks=50000
+windows=3000
+systick_ticks_features_total=35916458
+systick_ticks_quantize_total=45579
+systick_ticks_mlp_total=700595
+systick_ticks_features_min=11972
+systick_ticks_features_max=11973
+systick_ticks_mlp_min=233
+systick_ticks_mlp_max=234
+dwt_cyccnt_delta=0
+QEMU cortex-m3 (mps2-an385): BIT-EXACT on the whole test set
+   text	   data	    bss	    dec	    hex	filename
+  12560	      0	  14356	  26916	   6924	/home/user/PROJECTS/industrial-edge/tinyml/c/m4/build/edge_m3.elf
+edge_ml.o .data 0
+edge_ml.o .text 3044
+edge_ml.o .bss 0
+edge_ml.o .roda 8140
+edge_ml.o .bss. 10240
+../edge_ml.c:22:13:fft_core	80	static
+../edge_ml.c:45:17:order_energy	28	static
+../edge_ml.c:54:6:edge_features	64	static
+../edge_ml.c:118:6:edge_quantize	24	static
+../edge_ml.c:145:6:edge_mlp	96	static
+../edge_ml.c:152:5:edge_argmax	12	static
+../edge_ml.c:159:5:edge_classify	136	static

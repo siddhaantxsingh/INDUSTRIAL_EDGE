@@ -1,0 +1,218 @@
+[
+ {
+  "Tag": "level",
+  "Method": "swinging_door",
+  "Dev": 0.01,
+  "Ratio": 1.6040636278572384,
+  "MaxErr": 0.009999694824216476,
+  "Kept": 22443,
+  "Total": 36000
+ },
+ {
+  "Tag": "level",
+  "Method": "deadband",
+  "Dev": 0.01,
+  "Ratio": 1.000027778549404,
+  "MaxErr": 0.003536224365234375,
+  "Kept": 35999,
+  "Total": 36000
+ },
+ {
+  "Tag": "level",
+  "Method": "swinging_door",
+  "Dev": 0.05,
+  "Ratio": 10.044642857142858,
+  "MaxErr": 0.049999768666516786,
+  "Kept": 3584,
+  "Total": 36000
+ },
+ {
+  "Tag": "level",
+  "Method": "deadband",
+  "Dev": 0.05,
+  "Ratio": 1.0032885569366257,
+  "MaxErr": 0.04998016357421875,
+  "Kept": 35882,
+  "Total": 36000
+ },
+ {
+  "Tag": "level",
+  "Method": "swinging_door",
+  "Dev": 0.2,
+  "Ratio": 37.5,
+  "MaxErr": 0.19999502644100886,
+  "Kept": 960,
+  "Total": 36000
+ },
+ {
+  "Tag": "level",
+  "Method": "deadband",
+  "Dev": 0.2,
+  "Ratio": 1.2672040550529762,
+  "MaxErr": 0.19998931884765625,
+  "Kept": 28409,
+  "Total": 36000
+ },
+ {
+  "Tag": "level",
+  "Method": "swinging_door",
+  "Dev": 0.5,
+  "Ratio": 50.91937765205092,
+  "MaxErr": 0.499987843345842,
+  "Kept": 707,
+  "Total": 36000
+ },
+ {
+  "Tag": "level",
+  "Method": "deadband",
+  "Dev": 0.5,
+  "Ratio": 2.6064291920069507,
+  "MaxErr": 0.4999961853027344,
+  "Kept": 13812,
+  "Total": 36000
+ },
+ {
+  "Tag": "temperature",
+  "Method": "swinging_door",
+  "Dev": 0.01,
+  "Ratio": 1.2151488557348276,
+  "MaxErr": 0.009999694824216476,
+  "Kept": 29626,
+  "Total": 36000
+ },
+ {
+  "Tag": "temperature",
+  "Method": "deadband",
+  "Dev": 0.01,
+  "Ratio": 1.1291992095605534,
+  "MaxErr": 0.0099945068359375,
+  "Kept": 31881,
+  "Total": 36000
+ },
+ {
+  "Tag": "temperature",
+  "Method": "swinging_door",
+  "Dev": 0.05,
+  "Ratio": 2.486874827300359,
+  "MaxErr": 0.04999997588392091,
+  "Kept": 14476,
+  "Total": 36000
+ },
+ {
+  "Tag": "temperature",
+  "Method": "deadband",
+  "Dev": 0.05,
+  "Ratio": 2.0806843139521445,
+  "MaxErr": 0.049999237060546875,
+  "Kept": 17302,
+  "Total": 36000
+ },
+ {
+  "Tag": "temperature",
+  "Method": "swinging_door",
+  "Dev": 0.2,
+  "Ratio": 110.76923076923077,
+  "MaxErr": 0.19999082075155883,
+  "Kept": 325,
+  "Total": 36000
+ },
+ {
+  "Tag": "temperature",
+  "Method": "deadband",
+  "Dev": 0.2,
+  "Ratio": 135.8490566037736,
+  "MaxErr": 0.199859619140625,
+  "Kept": 265,
+  "Total": 36000
+ },
+ {
+  "Tag": "temperature",
+  "Method": "swinging_door",
+  "Dev": 0.5,
+  "Ratio": 279.06976744186045,
+  "MaxErr": 0.49999223726892694,
+  "Kept": 129,
+  "Total": 36000
+ },
+ {
+  "Tag": "temperature",
+  "Method": "deadband",
+  "Dev": 0.5,
+  "Ratio": 529.4117647058823,
+  "MaxErr": 0.4865875244140625,
+  "Kept": 68,
+  "Total": 36000
+ },
+ {
+  "Tag": "outflow",
+  "Method": "swinging_door",
+  "Dev": 0.01,
+  "Ratio": 45.627376425855516,
+  "MaxErr": 0.009996280105287525,
+  "Kept": 789,
+  "Total": 36000
+ },
+ {
+  "Tag": "outflow",
+  "Method": "deadband",
+  "Dev": 0.01,
+  "Ratio": 1.3154048523823443,
+  "MaxErr": 0.009972572326660156,
+  "Kept": 27368,
+  "Total": 36000
+ },
+ {
+  "Tag": "outflow",
+  "Method": "swinging_door",
+  "Dev": 0.05,
+  "Ratio": 59.308072487644154,
+  "MaxErr": 0.049939506037206316,
+  "Kept": 607,
+  "Total": 36000
+ },
+ {
+  "Tag": "outflow",
+  "Method": "deadband",
+  "Dev": 0.05,
+  "Ratio": 4.595353586928772,
+  "MaxErr": 0.04999423027038574,
+  "Kept": 7834,
+  "Total": 36000
+ },
+ {
+  "Tag": "outflow",
+  "Method": "swinging_door",
+  "Dev": 0.2,
+  "Ratio": 75.78947368421052,
+  "MaxErr": 0.19999807675330894,
+  "Kept": 475,
+  "Total": 36000
+ },
+ {
+  "Tag": "outflow",
+  "Method": "deadband",
+  "Dev": 0.2,
+  "Ratio": 18.94736842105263,
+  "MaxErr": 0.1999962329864502,
+  "Kept": 1900,
+  "Total": 36000
+ },
+ {
+  "Tag": "outflow",
+  "Method": "swinging_door",
+  "Dev": 0.5,
+  "Ratio": 105.26315789473684,
+  "MaxErr": 0.49998588385753706,
+  "Kept": 342,
+  "Total": 36000
+ },
+ {
+  "Tag": "outflow",
+  "Method": "deadband",
+  "Dev": 0.5,
+  "Ratio": 64.28571428571429,
+  "MaxErr": 0.49979209899902344,
+  "Kept": 560,
+  "Total": 36000
+ }
+]

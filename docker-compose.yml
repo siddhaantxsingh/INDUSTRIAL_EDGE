@@ -1,0 +1,26 @@
+# Gateway + TLS-only mosquitto + simulated PLC/hoist.
+# First run deploy/certs/gen-certs.sh; then: docker compose up -d --build
+services:
+  mosquitto:
+    image: eclipse-mosquitto:2.0.18
+    volumes:
+      - ./deploy/mosquitto.conf:/mosquitto/config/mosquitto.conf:ro
+      - ./deploy/certs/out:/mosquitto/certs:ro
+    # not published: only the gateway connects (add ports: ["8883:8883"] for remote clients)
+  plcsim:
+    build: .
+    image: industrial-edge:dev
+    entrypoint: ["/usr/local/bin/plcsim"]
+    command: ["-listen", "0.0.0.0:5020", "-spike-every", "500", "-hoist", "${HOIST_CONDITION:-bearing_outer}", "-hoist-severity", "0.7"]
+    healthcheck: {disable: true}
+  edgegw:
+    build: .
+    image: industrial-edge:dev
+    depends_on: [mosquitto, plcsim]
+    volumes:
+      - ./deploy/gateway.docker.json:/etc/edgegw/gateway.json:ro
+      - ./deploy/certs/out:/etc/edgegw/certs:ro
+      - edgedata:/data
+    ports: ["127.0.0.1:${EDGE_HTTP_PORT:-9100}:9100"]
+volumes:
+  edgedata:

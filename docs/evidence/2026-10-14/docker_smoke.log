@@ -1,0 +1,171 @@
+ 21:00:11 up 22 min,  0 user,  load average: 29.59, 32.44, 22.08
+server.pem: OK
+client.pem: OK
+certificates and password file in /home/user/PROJECTS/industrial-edge/deploy/certs/out
+ Image industrial-edge:dev Building 
+ Image industrial-edge:dev Building 
+#1 [internal] load local bake definitions
+#1 reading from stdin 983B done
+#1 DONE 0.0s
+
+#2 [plcsim internal] load build definition from Dockerfile
+#2 transferring dockerfile: 739B done
+#2 DONE 0.0s
+
+#3 [edgegw internal] load metadata for docker.io/library/golang:1.24-alpine
+#3 DONE 0.1s
+
+#4 [edgegw internal] load metadata for docker.io/library/alpine:3.20
+#4 DONE 0.1s
+
+#5 [edgegw internal] load .dockerignore
+#5 transferring context: 65B done
+#5 DONE 0.1s
+
+#6 [edgegw stage-1 1/3] FROM docker.io/library/alpine:3.20@sha256:d9e853e87e55526f6b2917df91a2115c36dd7c696a35be12163d44e6e2a4b6bc
+#6 resolve docker.io/library/alpine:3.20@sha256:d9e853e87e55526f6b2917df91a2115c36dd7c696a35be12163d44e6e2a4b6bc 0.1s done
+#6 sha256:25f1d6b1951ac8eb3740558fe94cb83d377bdadf95fd9f98b50d2e1b96130471 3.63MB / 3.63MB 0.4s done
+#6 extracting sha256:25f1d6b1951ac8eb3740558fe94cb83d377bdadf95fd9f98b50d2e1b96130471 0.5s done
+#6 DONE 1.0s
+
+#7 [edgegw build 1/6] FROM docker.io/library/golang:1.24-alpine@sha256:8bee1901f1e530bfb4a7850aa7a479d17ae3a18beb6e09064ed54cfd245b7191
+#7 resolve docker.io/library/golang:1.24-alpine@sha256:8bee1901f1e530bfb4a7850aa7a479d17ae3a18beb6e09064ed54cfd245b7191 0.1s done
+#7 extracting sha256:589002ba0eaed121a1dbf42f6648f29e5be55d5c8a6ee0f8eaa0285cc21ac153 0.8s done
+#7 extracting sha256:8f78851c25d251496dd39ebce311b4d914a4a97c0ba1983039165a05fd96b925 0.1s done
+#7 extracting sha256:f7bdfd728ac2ad72d43b82689890dc698260d3a1049845f48fb3fb942df6c581 10.0s done
+#7 extracting sha256:c95d909b2488ff78a51d01ca745429e6d281e314006f231fe6e9f219cf5432ca 0.1s done
+#7 extracting sha256:4f4fb700ef54461cfa02571ae0db9a0dc1e0cdb5577484a6d75e68dc38e8acc1 0.0s done
+#7 DONE 11.6s
+
+#8 [edgegw build 2/6] WORKDIR /src
+#8 DONE 1.0s
+
+#9 [edgegw internal] load build context
+#9 ...
+
+#6 [plcsim stage-1 1/3] FROM docker.io/library/alpine:3.20@sha256:d9e853e87e55526f6b2917df91a2115c36dd7c696a35be12163d44e6e2a4b6bc
+#6 resolve docker.io/library/alpine:3.20@sha256:d9e853e87e55526f6b2917df91a2115c36dd7c696a35be12163d44e6e2a4b6bc 0.1s done
+#6 sha256:25f1d6b1951ac8eb3740558fe94cb83d377bdadf95fd9f98b50d2e1b96130471 3.63MB / 3.63MB 0.4s done
+#6 extracting sha256:25f1d6b1951ac8eb3740558fe94cb83d377bdadf95fd9f98b50d2e1b96130471 0.5s done
+#6 DONE 1.0s
+
+#7 [plcsim build 1/6] FROM docker.io/library/golang:1.24-alpine@sha256:8bee1901f1e530bfb4a7850aa7a479d17ae3a18beb6e09064ed54cfd245b7191
+#7 resolve docker.io/library/golang:1.24-alpine@sha256:8bee1901f1e530bfb4a7850aa7a479d17ae3a18beb6e09064ed54cfd245b7191 0.1s done
+#7 extracting sha256:589002ba0eaed121a1dbf42f6648f29e5be55d5c8a6ee0f8eaa0285cc21ac153 0.8s done
+#7 extracting sha256:8f78851c25d251496dd39ebce311b4d914a4a97c0ba1983039165a05fd96b925 0.1s done
+#7 extracting sha256:f7bdfd728ac2ad72d43b82689890dc698260d3a1049845f48fb3fb942df6c581 10.0s done
+#7 extracting sha256:c95d909b2488ff78a51d01ca745429e6d281e314006f231fe6e9f219cf5432ca 0.1s done
+#7 extracting sha256:4f4fb700ef54461cfa02571ae0db9a0dc1e0cdb5577484a6d75e68dc38e8acc1 0.0s done
+#7 DONE 11.6s
+
+#8 [plcsim build 2/6] WORKDIR /src
+#8 DONE 1.0s
+
+#9 [plcsim internal] load build context
+#9 transferring context: 192.26kB 0.1s done
+#9 DONE 0.2s
+
+#10 [plcsim build 3/6] COPY go.mod ./
+#10 DONE 0.3s
+
+#11 [plcsim build 4/6] COPY cmd ./cmd
+#11 DONE 0.4s
+
+#12 [edgegw build 5/6] COPY internal ./internal
+#12 DONE 0.6s
+
+#13 [edgegw stage-1 2/3] RUN adduser -D -u 10001 edge && mkdir -p /data && chown edge /data
+#13 DONE 1.6s
+
+#14 [plcsim build 6/6] RUN CGO_ENABLED=0 go build -trimpath -ldflags="-s -w" -o /out/edgegw ./cmd/edgegw &&     CGO_ENABLED=0 go build -trimpath -ldflags="-s -w" -o /out/plcsim ./cmd/plcsim
+#14 DONE 303.9s
+
+#15 [plcsim stage-1 3/3] COPY --from=build /out/edgegw /out/plcsim /usr/local/bin/
+#15 DONE 0.1s
+
+#16 [plcsim] exporting to image
+#16 exporting layers
+#16 exporting layers 0.9s done
+#16 exporting manifest sha256:80603a6a67d4a6f287010012737333a1aa741b0e678ca108ead5ed7562088762 0.1s done
+#16 exporting config sha256:6537f9697341fcf4326165f633281f911be194b9329ba36502e875e5aff7c815
+#16 exporting config sha256:6537f9697341fcf4326165f633281f911be194b9329ba36502e875e5aff7c815 0.0s done
+#16 exporting attestation manifest sha256:891626837a9d150b20178799dac51101a6449fb48c80088d544ecb8f3c6603d9
+#16 exporting attestation manifest sha256:891626837a9d150b20178799dac51101a6449fb48c80088d544ecb8f3c6603d9 0.1s done
+#16 exporting manifest list sha256:ada07406a0165f044ba4d4f027646b1c3fa6e0eed93bfba66d821d2dd8e943e1 0.0s done
+#16 naming to docker.io/library/industrial-edge:dev 0.0s done
+#16 unpacking to docker.io/library/industrial-edge:dev
+#16 unpacking to docker.io/library/industrial-edge:dev 0.5s done
+#16 DONE 1.7s
+
+#17 [edgegw] exporting to image
+#17 exporting layers 0.9s done
+#17 exporting manifest sha256:83d7928087d51a166031c9be57fbb46c4aaeef5d55a90a2d11f842bb13b562de 0.1s done
+#17 exporting config sha256:90ba833327c8f68e4d62ee2b20925d67a337a850d6ca71cc1e783eb3f4302281 0.0s done
+#17 exporting attestation manifest sha256:cbc6a28845416855cc8143df656ddceac88a54e41f13793a48b3a81d2e071874 0.1s done
+#17 exporting manifest list sha256:754283a9b592d9bfc88711dabb338dc7f881e6fbddaf5f6a6d110e51fb51d036 0.0s done
+#17 naming to docker.io/library/industrial-edge:dev 0.0s done
+#17 unpacking to docker.io/library/industrial-edge:dev 0.5s done
+#17 DONE 1.7s
+
+#18 [edgegw] resolving provenance for metadata file
+#18 DONE 0.0s
+
+#19 [plcsim] resolving provenance for metadata file
+#19 DONE 0.0s
+ Image industrial-edge:dev Built 
+ Image industrial-edge:dev Built 
+ Volume industrial-edge_edgedata Creating 
+ Network industrial-edge_default Creating 
+ Volume industrial-edge_edgedata Creating 
+ Network industrial-edge_default Creating 
+ Volume industrial-edge_edgedata Created 
+ Volume industrial-edge_edgedata Created 
+ Network industrial-edge_default Created 
+ Network industrial-edge_default Created 
+ Container industrial-edge-plcsim-1 Creating 
+ Container industrial-edge-mosquitto-1 Creating 
+ Container industrial-edge-mosquitto-1 Created 
+ Container industrial-edge-plcsim-1 Created 
+ Container industrial-edge-edgegw-1 Creating 
+ Container industrial-edge-edgegw-1 Created 
+ Container industrial-edge-mosquitto-1 Starting 
+ Container industrial-edge-plcsim-1 Starting 
+ Container industrial-edge-mosquitto-1 Started 
+ Container industrial-edge-plcsim-1 Started 
+ Container industrial-edge-edgegw-1 Starting 
+ Container industrial-edge-edgegw-1 Started 
+ok
+--- records received over TLS (20 s)
+kinds {'sample': 244, 'prediction': 39, 'alarm': 3, 'anomaly': 2}
+predictions {'bearing_outer': 39}
+fault alarms [('bearing_outer', 'UNACK')]
+--- plaintext client on the TLS port (must fail)
+Error: Protocol error
+refused as expected
+--- TLS client without a client certificate (must fail)
+Error: Protocol error
+refused as expected
+--- metrics
+edge_published_batches_total 222
+edge_inferences_total 42
+edge_drift_alerts_total 0
+edge_uplink_connected 1
+SMOKE TEST PASSED
+edgegw-1  | 2026/10/14 21:05:22 gateway gw1: 2 devices, queue backlog 0 (truncated 0 torn bytes)
+edgegw-1  | 2026/10/14 21:05:23 edge inference running on hoist1: first prediction bearing_outer (1.00)
+ Container industrial-edge-edgegw-1 Stopping 
+ Container industrial-edge-edgegw-1 Stopped 
+ Container industrial-edge-edgegw-1 Removing 
+ Container industrial-edge-edgegw-1 Removed 
+ Container industrial-edge-plcsim-1 Stopping 
+ Container industrial-edge-mosquitto-1 Stopping 
+ Container industrial-edge-plcsim-1 Stopped 
+ Container industrial-edge-plcsim-1 Removing 
+ Container industrial-edge-plcsim-1 Removed 
+ Container industrial-edge-mosquitto-1 Stopped 
+ Container industrial-edge-mosquitto-1 Removing 
+ Container industrial-edge-mosquitto-1 Removed 
+ Volume industrial-edge_edgedata Removing 
+ Network industrial-edge_default Removing 
+ Volume industrial-edge_edgedata Removed 
+ Network industrial-edge_default Removed 

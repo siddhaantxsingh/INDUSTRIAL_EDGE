@@ -1,0 +1,173 @@
+{
+ "alarm_rule": "3 consecutive positive windows",
+ "classes": [
+  "healthy",
+  "imbalance",
+  "misalignment",
+  "bearing_outer",
+  "bearing_inner",
+  "overload"
+ ],
+ "dataset": "SYNTHETIC (internal/hoistsim)",
+ "days_per_healthy_machine": 30,
+ "detectors": {
+  "ewma_z3": {
+   "detected": 0,
+   "f1": 0.008415469613259669,
+   "false_alarms": 0,
+   "false_alarms_per_machine_day": 0,
+   "fn": 111553,
+   "fp": 620,
+   "machines": 80,
+   "median_detect_severity": null,
+   "median_lead_days": null,
+   "p10_lead_days": null,
+   "per_fault": {
+    "bearing_inner": {
+     "median_lead_days": null,
+     "missed": 20
+    },
+    "bearing_outer": {
+     "median_lead_days": null,
+     "missed": 20
+    },
+    "imbalance": {
+     "median_lead_days": null,
+     "missed": 20
+    },
+    "misalignment": {
+     "median_lead_days": null,
+     "missed": 20
+    }
+   },
+   "precision": 0.4343065693430657,
+   "recall": 0.004248899838434691,
+   "tn": 152451,
+   "tp": 476
+  },
+  "ewma_z6": {
+   "detected": 0,
+   "f1": 0,
+   "false_alarms": 0,
+   "false_alarms_per_machine_day": 0,
+   "fn": 112029,
+   "fp": 0,
+   "machines": 80,
+   "median_detect_severity": null,
+   "median_lead_days": null,
+   "p10_lead_days": null,
+   "per_fault": {
+    "bearing_inner": {
+     "median_lead_days": null,
+     "missed": 20
+    },
+    "bearing_outer": {
+     "median_lead_days": null,
+     "missed": 20
+    },
+    "imbalance": {
+     "median_lead_days": null,
+     "missed": 20
+    },
+    "misalignment": {
+     "median_lead_days": null,
+     "missed": 20
+    }
+   },
+   "precision": 0,
+   "recall": 0,
+   "tn": 153071,
+   "tp": 0
+  },
+  "model": {
+   "detected": 80,
+   "f1": 0.922693155947638,
+   "false_alarms": 116,
+   "false_alarms_per_machine_day": 0.1091519285320568,
+   "fn": 8274,
+   "fp": 9112,
+   "machines": 80,
+   "median_detect_severity": 0.06482109686794207,
+   "median_lead_days": 11.181129485323892,
+   "p10_lead_days": 6.110706000890456,
+   "per_fault": {
+    "bearing_inner": {
+     "median_lead_days": 10.929334159093504,
+     "missed": 0
+    },
+    "bearing_outer": {
+     "median_lead_days": 11.181129485323892,
+     "missed": 0
+    },
+    "imbalance": {
+     "median_lead_days": 10.784757821127492,
+     "missed": 0
+    },
+    "misalignment": {
+     "median_lead_days": 11.111944181932229,
+     "missed": 0
+    }
+   },
+   "precision": 0.9192678107861465,
+   "recall": 0.9261441233966206,
+   "tn": 143959,
+   "tp": 103755
+  }
+ },
+ "healthy_machine_days": 1062.7388957761932,
+ "healthy_machines": 20,
+ "incipient_windows_unscored": 114822,
+ "model_confusion": [
+  [
+   143959,
+   2760,
+   258,
+   1237,
+   3514,
+   1343
+  ],
+  [
+   1862,
+   24855,
+   15,
+   18,
+   132,
+   113
+  ],
+  [
+   186,
+   16,
+   27537,
+   4,
+   44,
+   16
+  ],
+  [
+   1365,
+   37,
+   1,
+   26092,
+   258,
+   25
+  ],
+  [
+   4861,
+   208,
+   24,
+   157,
+   24101,
+   102
+  ],
+  [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ]
+ ],
+ "rtf_machines_per_fault": 20,
+ "seed": 11,
+ "windows_per_day": 144
+}

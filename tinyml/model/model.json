@@ -1,0 +1,204 @@
+{
+ "dataset": "SYNTHETIC (internal/hoistsim, cmd/vibgen -seed 1): train speeds 600-1000 and 1300-1750 rpm, test speeds 1000-1300 rpm (held out); severity 0.1-1.0",
+ "classes": [
+  "healthy",
+  "imbalance",
+  "misalignment",
+  "bearing_outer",
+  "bearing_inner",
+  "overload"
+ ],
+ "features": [
+  "rms",
+  "kurtosis",
+  "crest",
+  "ord1x",
+  "ord2x",
+  "ord3x",
+  "band5_20Hz",
+  "band20_40Hz",
+  "band40_80Hz",
+  "band80_160Hz",
+  "band160_320Hz",
+  "band320_640Hz",
+  "band640_960Hz",
+  "band960_1280Hz",
+  "band1280_1920Hz",
+  "band1920_2560Hz",
+  "env_bpfo",
+  "env_bpfi",
+  "env_1x",
+  "env_total",
+  "current",
+  "rpm"
+ ],
+ "hidden": [
+  32,
+  16
+ ],
+ "n_train": 9000,
+ "n_test": 3000,
+ "params": 1366,
+ "weight_bytes": 1312,
+ "bias_bytes": 216,
+ "acc_float": 0.967,
+ "acc_int8": 0.9673333333333334,
+ "float_int8_agreement": 0.9976666666666667,
+ "macro_f1_float": 0.9674550990125218,
+ "macro_f1_int8": 0.967836794815245,
+ "confusion_int8": [
+  [
+   485,
+   6,
+   1,
+   0,
+   5,
+   3
+  ],
+  [
+   13,
+   486,
+   0,
+   0,
+   0,
+   1
+  ],
+  [
+   2,
+   0,
+   498,
+   0,
+   0,
+   0
+  ],
+  [
+   9,
+   0,
+   0,
+   491,
+   0,
+   0
+  ],
+  [
+   38,
+   3,
+   0,
+   0,
+   458,
+   1
+  ],
+  [
+   14,
+   0,
+   0,
+   0,
+   2,
+   484
+  ]
+ ],
+ "confusion_float": [
+  [
+   483,
+   6,
+   1,
+   0,
+   7,
+   3
+  ],
+  [
+   13,
+   486,
+   0,
+   0,
+   0,
+   1
+  ],
+  [
+   2,
+   0,
+   498,
+   0,
+   0,
+   0
+  ],
+  [
+   7,
+   0,
+   0,
+   491,
+   2,
+   0
+  ],
+  [
+   37,
+   3,
+   0,
+   0,
+   459,
+   1
+  ],
+  [
+   14,
+   0,
+   0,
+   0,
+   2,
+   484
+  ]
+ ],
+ "test_expected_sha256": "4b2a25fe03f83afaa0223582106586884909871fe166252d8cd99ce0c8fd3257",
+ "epochs": 81,
+ "sklearn_seed": 0,
+ "logit_scale": 0.19362428385218639,
+ "logit_zp": -8,
+ "train_conf_mean": 0.9562017970440019,
+ "train_conf_std": 0.1065057475792193,
+ "feat_lo": [
+  3014,
+  -792,
+  415,
+  5730,
+  5815,
+  5143,
+  4930,
+  6115,
+  5550,
+  6216,
+  5962,
+  6270,
+  6194,
+  6203,
+  6482,
+  6480,
+  4695,
+  4628,
+  4667,
+  6936,
+  2541,
+  2349
+ ],
+ "feat_mul": [
+  9671,
+  7464,
+  11353,
+  4764,
+  5315,
+  5249,
+  5022,
+  5348,
+  4968,
+  9004,
+  7634,
+  8745,
+  11525,
+  11009,
+  7773,
+  6760,
+  3911,
+  4379,
+  4624,
+  6886,
+  31531,
+  42741
+ ]
+}

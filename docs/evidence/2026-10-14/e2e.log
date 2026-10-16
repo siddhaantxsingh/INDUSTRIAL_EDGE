@@ -1,0 +1,14 @@
+ 20:53:41 up 16 min,  0 user,  load average: 33.45, 25.46, 14.50
+    e2e_test.go:242: records 1111, duplicates 3, batches 136, kinds map[anomaly:2 sample:1109]
+--- PASS: TestNoLossAcrossBrokerOutageAndGatewayKill (8.55s)
+--- PASS: TestPLCOutageReportsBadThenGoodQuality (4.07s)
+    secure_inference_test.go:99: received over TLS: predictions map[bearing_inner:5], alarm bearing_inner UNACK
+--- PASS: TestSecureUplinkWithEdgeInference (0.75s)
+--- PASS: TestGatewayRefusesPlaintextWhenTLSRequired (0.01s)
+    e2e_test.go:242: records 1115, duplicates 3, batches 135, kinds map[anomaly:2 sample:1113]
+--- PASS: TestNoLossAcrossBrokerOutageAndGatewayKill (8.59s)
+--- PASS: TestPLCOutageReportsBadThenGoodQuality (4.19s)
+    secure_inference_test.go:99: received over TLS: predictions map[bearing_inner:5], alarm bearing_inner UNACK
+--- PASS: TestSecureUplinkWithEdgeInference (0.90s)
+--- PASS: TestGatewayRefusesPlaintextWhenTLSRequired (0.06s)
+ok  	industrial-edge/e2e	32.160s

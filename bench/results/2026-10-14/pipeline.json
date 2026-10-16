@@ -1,0 +1,17 @@
+{
+ "cpu_cores_used": 0.5904775143505385,
+ "delivered_per_sec": 9999.619210000654,
+ "latency_ms_max": 140,
+ "latency_ms_p50": 42,
+ "latency_ms_p95": 96,
+ "latency_ms_p99": 127,
+ "modbus_requests": 4020,
+ "note": "process CPU includes the 20 simulated PLC servers, the value updater and the subscriber",
+ "plcs": 20,
+ "poll_ms": 100,
+ "process_cpu_seconds": 11.809999999999999,
+ "records_delivered": 200000,
+ "samples_acquired": 201000,
+ "seconds": 20.000761609,
+ "tags": 1000
+}

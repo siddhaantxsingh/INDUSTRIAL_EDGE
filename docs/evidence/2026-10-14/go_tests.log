@@ -1,0 +1,53 @@
+ 20:48:11 up 10 min,  0 user,  load average: 18.98, 16.39, 8.39
+ok  	industrial-edge/internal/analytics	(cached)
+ok  	industrial-edge/internal/drift	17.266s
+ok  	industrial-edge/internal/gateway	9.057s
+?   	industrial-edge/internal/hoistsim	[no test files]
+ok  	industrial-edge/internal/modbus	(cached)
+ok  	industrial-edge/internal/mqtt	1.767s
+?   	industrial-edge/internal/plcsim	[no test files]
+ok  	industrial-edge/internal/queue	6.853s
+?   	industrial-edge/internal/testutil	[no test files]
+ok  	industrial-edge/internal/tinyml	16.271s
+2026/10/14 20:48:43 gateway gw1: 1 devices, queue backlog 0 (truncated 0 torn bytes)
+2026/10/14 20:48:44 uplink: mqtt: read: EOF; reconnecting
+2026/10/14 20:48:44 uplink: connect: dial tcp 127.0.0.1:36603: connect: connection refused
+2026/10/14 20:48:48 gateway gw1: 1 devices, queue backlog 444 (truncated 0 torn bytes)
+2026/10/14 20:48:50 uplink: mqtt: read: EOF; reconnecting
+2026/10/14 20:48:50 uplink: connect: dial tcp 127.0.0.1:36603: connect: connection refused
+2026/10/14 20:48:50 shutting down
+2026/10/14 20:48:52 stopped; backlog 0
+2026/10/14 20:48:53 gateway gw1: 1 devices, queue backlog 0 (truncated 0 torn bytes)
+2026/10/14 20:48:57 shutting down
+2026/10/14 20:48:57 stopped; backlog 0
+2026/10/14 20:48:58 gateway gw1: 1 devices, queue backlog 0 (truncated 0 torn bytes)
+2026/10/14 20:48:58 edge inference running on hoist1: first prediction bearing_inner (1.00)
+2026/10/14 20:48:59 shutting down
+2026/10/14 20:49:00 stopped; backlog 0
+2026/10/14 20:49:00 config: mqtt.require_tls is set but mqtt.tls is missing: refusing plaintext MQTT
+2026/10/14 20:49:00 gateway gw1: 1 devices, queue backlog 0 (truncated 0 torn bytes)
+2026/10/14 20:49:02 uplink: mqtt: read: EOF; reconnecting
+2026/10/14 20:49:02 uplink: connect: dial tcp 127.0.0.1:35989: connect: connection refused
+2026/10/14 20:49:06 gateway gw1: 1 devices, queue backlog 3 (truncated 0 torn bytes)
+2026/10/14 20:49:07 uplink: mqtt: read: EOF; reconnecting
+2026/10/14 20:49:07 uplink: connect: dial tcp 127.0.0.1:35989: connect: connection refused
+2026/10/14 20:49:08 shutting down
+2026/10/14 20:49:09 stopped; backlog 0
+--- FAIL: TestNoLossAcrossBrokerOutageAndGatewayKill (9.59s)
+    e2e_test.go:240: expected anomalies from injected spikes and many counter samples: map[sample:261]
+2026/10/14 20:49:10 gateway gw1: 1 devices, queue backlog 0 (truncated 0 torn bytes)
+2026/10/14 20:49:14 shutting down
+2026/10/14 20:49:14 stopped; backlog 0
+2026/10/14 20:49:15 gateway gw1: 1 devices, queue backlog 0 (truncated 0 torn bytes)
+2026/10/14 20:49:15 edge inference running on hoist1: first prediction bearing_inner (1.00)
+2026/10/14 20:49:16 shutting down
+2026/10/14 20:49:16 stopped; backlog 0
+2026/10/14 20:49:16 config: mqtt.require_tls is set but mqtt.tls is missing: refusing plaintext MQTT
+FAIL
+FAIL	industrial-edge/e2e	35.529s
+FAIL
+
+NOTE (added after the run): TestNoLossAcrossBrokerOutageAndGatewayKill failed in this run and in 3 immediate
+re-runs (only 226-373 records, no anomalies) while the shared machine had a load average of 17-31.
+It then passed 4/4 times (and 4/4 on the pre-change commit 4fe1ec7) a few minutes later, and in
+e2e.log. The cause was not found; it is recorded here as an unexplained, load-related flake.

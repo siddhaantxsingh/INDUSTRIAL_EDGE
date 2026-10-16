@@ -1,0 +1,23 @@
+{
+  "gateway_id": "gw1",
+  "data_dir": "./data/gw1",
+  "http": "127.0.0.1:9100",
+  "mqtt": {"addr": "127.0.0.1:1883", "topic_prefix": "plant1/gw1", "keepalive_s": 10, "batch_max": 500, "inflight": 8},
+  "queue": {"segment_bytes": 4194304, "max_bytes": 268435456, "sync_ms": 100},
+  "devices": [{
+    "name": "tank1", "addr": "127.0.0.1:5020", "unit": 1, "poll_ms": 100, "timeout_ms": 500,
+    "tags": [
+      {"name": "level", "table": "input", "addr": 0, "type": "float32", "unit": "%",
+       "compression": {"type": "swinging_door", "dev": 0.2, "max_gap_ms": 10000},
+       "alarm": {"high": 58, "deadband": 2, "on_delay_ms": 500, "off_delay_ms": 500}},
+      {"name": "temperature", "table": "input", "addr": 2, "type": "float32", "unit": "C",
+       "compression": {"type": "deadband", "dev": 0.1, "max_gap_ms": 10000},
+       "anomaly": {"alpha": 0.05, "z": 6, "warmup": 50}},
+      {"name": "outflow", "table": "input", "addr": 4, "type": "float32", "unit": "m3/h",
+       "compression": {"type": "swinging_door", "dev": 0.05, "max_gap_ms": 10000}},
+      {"name": "counter", "table": "input", "addr": 6, "type": "uint32"},
+      {"name": "valve", "table": "holding", "addr": 0, "type": "uint16", "unit": "%"},
+      {"name": "pump", "table": "coil", "addr": 0, "type": "bool"}
+    ]
+  }]
+}
